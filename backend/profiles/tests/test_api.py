@@ -1,3 +1,6 @@
+from datetime import datetime
+from datetime import timezone as dt_timezone
+
 from django.contrib.auth.models import User
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -73,6 +76,104 @@ class SearchProfilesTests(APITestCase):
         for i in range(15):
             create_profile(username=f'filler{i}')
         self.assertEqual(self.search('noura'), ['noura.alsabah'])
+
+
+class FilterProfilesTests(APITestCase):
+    def setUp(self):
+        self.sara = create_profile(username='sara', department='Design')
+        self.omar = create_profile(username='omar', department='Engineering', is_active=False)
+        self.lina = create_profile(username='lina', department='engineering')
+        # auto_now / auto_now_add ignore values passed to create(), so set the dates directly.
+        UserProfile.objects.filter(pk=self.sara.pk).update(
+            created_at=datetime(2026, 1, 10, 9, tzinfo=dt_timezone.utc),
+            updated_at=datetime(2026, 3, 1, 9, tzinfo=dt_timezone.utc),
+        )
+        UserProfile.objects.filter(pk=self.omar.pk).update(
+            created_at=datetime(2026, 2, 15, 9, tzinfo=dt_timezone.utc),
+            updated_at=datetime(2026, 2, 15, 9, tzinfo=dt_timezone.utc),
+        )
+        UserProfile.objects.filter(pk=self.lina.pk).update(
+            created_at=datetime(2026, 3, 20, 9, tzinfo=dt_timezone.utc),
+            updated_at=datetime(2026, 3, 20, 9, tzinfo=dt_timezone.utc),
+        )
+
+    def usernames(self, **params):
+        response = self.client.get(LIST_URL, params)
+        self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+        return sorted(row['username'] for row in response.data['results'])
+
+    def test_department_ignores_case(self):
+        self.assertEqual(self.usernames(department='ENGINEERING'), ['lina', 'omar'])
+
+    def test_is_active(self):
+        self.assertEqual(self.usernames(is_active='false'), ['omar'])
+        self.assertEqual(self.usernames(is_active='true'), ['lina', 'sara'])
+
+    def test_created_range_is_start_inclusive_end_exclusive(self):
+        self.assertEqual(
+            self.usernames(created_after='2026-02-15T09:00:00Z', created_before='2026-03-20T09:00:00Z'),
+            ['omar'],
+        )
+
+    def test_plain_dates_are_accepted(self):
+        self.assertEqual(self.usernames(created_after='2026-02-01'), ['lina', 'omar'])
+        self.assertEqual(self.usernames(updated_before='2026-02-16'), ['omar'])
+
+    def test_datetime_with_offset_is_respected(self):
+        # 2026-03-20 09:00 UTC is 12:00 in Kuwait (+03:00), so a Kuwait day ending at noon excludes it.
+        self.assertEqual(self.usernames(created_after='2026-03-20T00:00:00+03:00'), ['lina'])
+        self.assertEqual(self.usernames(created_after='2026-03-20T12:00:01+03:00'), [])
+
+    def test_filters_combine_with_search(self):
+        self.assertEqual(self.usernames(search='lina', department='engineering'), ['lina'])
+        self.assertEqual(self.usernames(search='omar', department='design'), [])
+
+    def test_invalid_values_return_400(self):
+        response = self.client.get(LIST_URL, {'created_after': 'yesterday', 'is_active': 'maybe'})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn('created_after', response.data)
+        self.assertIn('is_active', response.data)
+
+    def test_departments_lists_distinct_sorted_values(self):
+        response = self.client.get(f'{LIST_URL}departments/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, ['Design', 'Engineering', 'engineering'])
+
+    def test_countries_lists_distinct_sorted_values(self):
+        UserProfile.objects.filter(pk=self.omar.pk).update(country='Kuwait')
+        response = self.client.get(f'{LIST_URL}countries/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, ['Kuwait', 'United Arab Emirates'])
+
+
+class OrderProfilesTests(APITestCase):
+    def setUp(self):
+        create_profile(username='b', first_name='Bilal', department='Sales', city='Doha')
+        create_profile(username='a', first_name='Amal', department='Design', city='Kuwait City')
+        create_profile(username='c', first_name='Carla', department='Design', city='Amman')
+
+    def usernames(self, ordering):
+        response = self.client.get(LIST_URL, {'ordering': ordering})
+        self.assertEqual(response.status_code, status.HTTP_200_OK, response.data)
+        return [row['username'] for row in response.data['results']]
+
+    def test_default_order_is_newest_first(self):
+        response = self.client.get(LIST_URL)
+        self.assertEqual([row['username'] for row in response.data['results']], ['c', 'a', 'b'])
+
+    def test_ascending_and_descending(self):
+        self.assertEqual(self.usernames('name'), ['a', 'b', 'c'])
+        self.assertEqual(self.usernames('-name'), ['c', 'b', 'a'])
+        self.assertEqual(self.usernames('city'), ['c', 'b', 'a'])
+
+    def test_ties_are_broken_by_id(self):
+        self.assertEqual(self.usernames('department'), ['a', 'c', 'b'])
+        self.assertEqual(self.usernames('-department'), ['b', 'c', 'a'])
+
+    def test_unknown_field_returns_400(self):
+        response = self.client.get(LIST_URL, {'ordering': 'user__password'})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn('ordering', response.data)
 
 
 class RetrieveProfileTests(APITestCase):

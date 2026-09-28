@@ -5,6 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
 from rest_framework.response import Response
 
+from .filters import filter_profiles, order_profiles
 from .importer import import_profiles
 from .models import UserProfile
 from .serializers import UserProfileSerializer
@@ -16,6 +17,10 @@ MAX_IMPORT_RECORDS = 1000
 class UserProfileViewSet(viewsets.ModelViewSet):
     """
     list:     GET    /api/profiles/?page=&page_size=&search=
+                     &department=&is_active=&created_after=&created_before=
+                     &updated_after=&updated_before=&ordering=
+    departments: GET /api/profiles/departments/  (distinct values, for dropdowns)
+    countries:   GET /api/profiles/countries/    (distinct values, for dropdowns)
     create:   POST   /api/profiles/          (JSON or multipart)
     retrieve: GET    /api/profiles/{id}/
     update:   PUT    /api/profiles/{id}/     (JSON or multipart)
@@ -32,10 +37,36 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     # match one of these fields, so full-name searches work too.
     search_fields = ['user__username', 'user__email', 'user__first_name', 'user__last_name']
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.action == 'list':
+            queryset = filter_profiles(queryset, self.request.query_params)
+            queryset = order_profiles(queryset, self.request.query_params)
+        return queryset
+
     def perform_destroy(self, instance):
         # The profile only exists for its User, so remove both. The profile
         # (and its image file) goes with it through CASCADE.
         instance.user.delete()
+
+    @action(detail=False, methods=['get'])
+    def departments(self, request):
+        return Response(self._distinct_values('department'))
+
+    @action(detail=False, methods=['get'])
+    def countries(self, request):
+        return Response(self._distinct_values('country'))
+
+    @staticmethod
+    def _distinct_values(field):
+        """Sorted, non-empty values of one profile field, e.g. every department in use."""
+        values = (
+            UserProfile.objects.exclude(**{field: ''})
+            .order_by(field)
+            .values_list(field, flat=True)
+            .distinct()
+        )
+        return list(values)
 
     @action(detail=False, methods=['post'], url_path='import', parser_classes=[MultiPartParser])
     def import_file(self, request):
