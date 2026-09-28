@@ -65,7 +65,7 @@ cd backend
 .venv/bin/python manage.py test profiles
 ```
 
-36 tests cover the API, image handling and import. They use a temporary database and a temporary media folder, so your data is not touched.
+49 tests cover the API (including filters and sorting), image handling and import. They use a temporary database and a temporary media folder, so your data is not touched.
 
 Frontend checks:
 
