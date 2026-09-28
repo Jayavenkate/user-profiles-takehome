@@ -18,6 +18,7 @@ BOOLEAN_VALUES = {'true': True, '1': True, 'false': False, '0': False}
 # ?ordering= value -> ORM fields. A leading "-" sorts descending, e.g. ?ordering=-created_at.
 ORDERING_FIELDS = {
     'name': ['user__first_name', 'user__last_name'],
+    'username': ['user__username'],
     'department': ['department'],
     'job_title': ['job_title'],
     'city': ['city'],

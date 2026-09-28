@@ -73,7 +73,7 @@ Errors: `400` for validation errors (body is `{ field: [messages] }`), `404` for
 | `is_active` | none | `true` or `false` |
 | `created_after` / `created_before` | none | ISO datetime (`2026-09-28T00:00:00+03:00`) or date (`2026-09-28`, midnight UTC). `after` is inclusive, `before` is exclusive |
 | `updated_after` / `updated_before` | none | same as above, for `updated_at` |
-| `ordering` | `-created_at` | one of `name`, `department`, `job_title`, `city`, `is_active`, `created_at`, `updated_at`; prefix `-` for descending. `name` sorts by first then last name. Ties are broken by `id`, so pages stay stable |
+| `ordering` | `-created_at` | one of `name`, `username`, `department`, `job_title`, `city`, `is_active`, `created_at`, `updated_at`; prefix `-` for descending. `name` sorts by first then last name. Ties are broken by `id`, so pages stay stable |
 
 All filters combine with each other and with `search`. An invalid value (including an unknown `ordering`) returns 400, e.g. `{"created_after": ["Enter a valid date or ISO datetime."]}`.
 

@@ -89,15 +89,16 @@ describe('ProfileListPage', () => {
   })
 
   it('lists profiles and sorts when a column header is clicked', async () => {
-    listProfiles.mockResolvedValue(makePage([makeProfile(), makeProfile({ id: 2, first_name: 'Omar', email: 'omar@example.com' })]))
+    listProfiles.mockResolvedValue(makePage([makeProfile(), makeProfile({ id: 2, username: 'omar', first_name: 'Omar', email: 'omar@example.com' })]))
     const user = renderList()
 
     const table = await screen.findByRole('table')
     expect(within(table).getByRole('link', { name: 'Sara Ahmed' })).toBeInTheDocument()
     expect(within(table).getByRole('link', { name: 'Omar Ahmed' })).toBeInTheDocument()
+    expect(within(table).getByRole('cell', { name: 'sara.ahmed' })).toBeInTheDocument()
     expect(lastListCall().ordering).toBe('')
 
-    const nameHeader = screen.getByRole('columnheader', { name: /Name/ })
+    const nameHeader = screen.getByRole('columnheader', { name: 'Name' })
     await user.click(within(nameHeader).getByRole('button'))
     await waitFor(() => expect(lastListCall().ordering).toBe('name'))
     expect(nameHeader).toHaveAttribute('aria-sort', 'ascending')

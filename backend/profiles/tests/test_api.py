@@ -165,6 +165,7 @@ class OrderProfilesTests(APITestCase):
         self.assertEqual(self.usernames('name'), ['a', 'b', 'c'])
         self.assertEqual(self.usernames('-name'), ['c', 'b', 'a'])
         self.assertEqual(self.usernames('city'), ['c', 'b', 'a'])
+        self.assertEqual(self.usernames('-username'), ['c', 'b', 'a'])
 
     def test_ties_are_broken_by_id(self):
         self.assertEqual(self.usernames('department'), ['a', 'c', 'b'])

@@ -8,6 +8,7 @@ import StatusBadge from './StatusBadge'
 
 const COLUMNS = [
   { field: 'name', label: 'Name' },
+  { field: 'username', label: 'Username' },
   { field: 'department', label: 'Department' },
   { field: 'job_title', label: 'Job title' },
   { field: 'city', label: 'City' },
@@ -99,6 +100,7 @@ export default function ProfileTable({ profiles, selectedIds, onSelectionChange,
                     </div>
                   </div>
                 </td>
+                <td className="cell-nowrap">{profile.username}</td>
                 <td>{profile.department ? <span className="tag">{profile.department}</span> : <span className="cell-muted">—</span>}</td>
                 <td className="cell-nowrap">{profile.job_title || <span className="cell-muted">—</span>}</td>
                 <td className="cell-nowrap">
