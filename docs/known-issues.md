@@ -14,7 +14,7 @@ Nothing in the core requirements is unfinished as far as I know. These are the l
 
 ## Frontend
 
-- **No frontend automated tests.** I checked the UI by driving it in a headless browser (list, search as you type, sorting, filters, row selection, bulk delete, pagination, import, detail, create, edit, image preview/replace/remove, delete, 404s, and 768px width), but those scripts are not part of the repo.
+- **Frontend tests cover the form and the list page only.** The detail, edit and import flows, the filter drawer and bulk delete have no automated tests. I checked them by driving the UI in a headless browser (also at 768px width), but those scripts are not part of the repo.
 - **Bulk delete is one request per profile.** There is no bulk endpoint, so if some deletes fail the rest still go through; the failures are listed afterwards.
 - **Selection is per page.** Ticked rows are cleared when you change page, search or filters, so bulk actions only reach the rows you can see.
 - **No warning about unsaved changes** when leaving the form.

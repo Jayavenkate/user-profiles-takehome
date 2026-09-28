@@ -79,8 +79,11 @@ src/
 │   ├── ImportButton.jsx, ImportResult.jsx
 │   ├── ConfirmDialog.jsx, Toast.jsx, Spinner.jsx, Icons.jsx
 │   └── ProfileImage.jsx, StatusBadge.jsx, DeleteProfileButton.jsx, Layout.jsx
-└── utils/                  validation, formatting and URL filter helpers
+├── utils/                  validation, formatting and URL filter helpers
+└── test/                   Vitest setup and shared fixtures
 ```
+
+Tests sit next to the code they cover (`*.test.js` / `*.test.jsx`). Component tests render with a `MemoryRouter` and a stub `ToastContext`, and replace `api/profiles.js` with `vi.mock`, so they check what the user sees without a server.
 
 ### Routes (React Router 7)
 

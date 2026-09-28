@@ -40,11 +40,12 @@
 
 **A native `<dialog>` for delete confirmation.** `ConfirmDialog` uses `showModal()`, which gives focus trapping, Esc to close and a backdrop without a modal library. Unlike `window.confirm`, it can name the profile being deleted and stay open with a spinner until the request finishes.
 
+**Frontend tests through the UI, with the API mocked.** Tests use React Testing Library queries by role and label, the way a user or screen reader finds things, so they survive markup and styling changes. Only `api/profiles.js` is mocked. The form, validation, routing and URL state all run for real. Pure helpers (`validateProfile`, `filters`) get plain unit tests.
+
 **Always send multipart from the form.** The API accepts both formats, and using `FormData` for every save means one code path whether or not an image was chosen.
 
 ## What I'd improve with more time
 
-- **Frontend tests** (Vitest + React Testing Library): form validation, API error mapping, and the empty and no-results states.
 - **Thumbnails.** Resize uploaded images (for example with Pillow on save), so the list doesn't download full-size images for 36px avatars.
 - **An "unsaved changes" warning** when leaving the form.
 - **Database-level email uniqueness** (a unique constraint on `Lower('email')` in a migration) to close the race described in Known issues.

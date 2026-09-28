@@ -67,13 +67,16 @@ cd backend
 
 49 tests cover the API (including filters and sorting), image handling and import. They use a temporary database and a temporary media folder, so your data is not touched.
 
-Frontend checks:
+Frontend tests and checks:
 
 ```bash
 cd frontend
+npm test          # or `npm run test:watch` while working
 npm run lint
 npm run build
 ```
+
+30 frontend tests (Vitest + React Testing Library, in jsdom) cover form validation, server error mapping, the list's empty / no-results / error states, sorting, debounced search, and the filter and validation helpers. The API module is mocked, so the backend doesn't need to be running.
 
 ## Reset the database
 
