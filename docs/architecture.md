@@ -10,7 +10,7 @@ Browser (React, :5173) ──fetch──► Django REST Framework (:8000) ──
 
 ```
 backend/
-├── config/              project settings and root URLs
+├── config/              project settings and root URLs (including /api/schema/ and /api/docs/)
 └── profiles/
     ├── models.py        UserProfile model, image validators
     ├── signals.py       delete image files when they are no longer used
@@ -20,7 +20,7 @@ backend/
     ├── importer.py      JSON import logic
     ├── pagination.py    ?page= and ?page_size=
     ├── admin.py         Django admin registration
-    └── tests/           API, image and import tests
+    └── tests/           API, image, import and schema tests
 ```
 
 ### Models
@@ -49,6 +49,7 @@ A single `UserProfileViewSet` (DRF `ModelViewSet`) provides list, retrieve, crea
 - **Search.** DRF `SearchFilter` over username, email, first name and last name. Each word in the query must match one of those fields, so `ahmad smith` finds Ahmad Smith.
 - **Filters.** `filters.py` applies `department`, `is_active` and the `created_*` / `updated_*` date range params on the list only. Bad values raise a 400 with field errors, like the serializer does. `GET /api/profiles/departments/` and `/countries/` feed the dropdowns.
 - **Sorting.** `order_profiles()` in `filters.py` maps `?ordering=` names (`name`, `department`, `city`, `-created_at`, …) to ORM fields. It uses an explicit allowlist rather than DRF's `OrderingFilter`, so the API exposes short column names and never lets a client sort by an arbitrary field. `id` is always added as a tiebreaker so rows don't shift between pages.
+- **API docs.** `drf-spectacular` builds an OpenAPI 3 schema from the viewset and serializer, served at `/api/schema/` with Swagger UI at `/api/docs/`. The list filters and ordering are read by hand in `filters.py`, so `views.py` declares them with `@extend_schema` parameters. It also describes the import upload and response, and turns off auth in the schema because the API has none.
 - **Pagination.** `PageNumberPagination` with `page_size` from the query string (default 10, max 100). The response includes `count`, `next` and `previous`.
 - **Queries.** The queryset uses `select_related('user')`, so a page of profiles is one query rather than one per row.
 - **Delete.** Deleting a profile deletes its `User`. The profile goes with it through `CASCADE`.

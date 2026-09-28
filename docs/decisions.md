@@ -51,4 +51,4 @@
 - **Database-level email uniqueness** (a unique constraint on `Lower('email')` in a migration) to close the race described in Known issues.
 - **Import preview / update mode.** Show what will happen before committing, with an optional "update existing" mode.
 - **Authentication and permissions** on the API.
-- **OpenAPI docs** via `drf-spectacular`, and a `docker-compose.yml` for one-command setup.
+- **A `docker-compose.yml`** for one-command setup.

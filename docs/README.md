@@ -10,7 +10,7 @@ A Django + DRF backend and a React (Vite) frontend for managing user profiles, w
 | [Import behaviour](import.md) | How bad records and duplicates are handled |
 | [Decisions & trade-offs](decisions.md) | What I chose, why, and what I'd improve |
 | [Known issues](known-issues.md) | What is missing or limited |
-| [Screenshots](screenshots/) | List, search, filters, form, detail, import result and 768px width |
+| [Screenshots](screenshots/) | List, search, filters, form, detail, import result, 768px width and Swagger UI |
 
 ## Quick start
 

@@ -21,6 +21,8 @@ python manage.py migrate
 python manage.py runserver         # http://localhost:8000
 ```
 
+Interactive API docs (Swagger UI) are at http://localhost:8000/api/docs/.
+
 Optional, to use the Django admin at http://localhost:8000/admin/:
 
 ```bash
@@ -65,7 +67,7 @@ cd backend
 .venv/bin/python manage.py test profiles
 ```
 
-49 tests cover the API (including filters and sorting), image handling and import. They use a temporary database and a temporary media folder, so your data is not touched.
+51 tests cover the API (including filters and sorting), image handling, import and the OpenAPI schema. They use a temporary database and a temporary media folder, so your data is not touched.
 
 Frontend tests and checks:
 

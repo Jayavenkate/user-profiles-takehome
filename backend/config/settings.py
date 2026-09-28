@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Third party
     'rest_framework',
     'corsheaders',
+    'drf_spectacular',
     # Local
     'profiles',
 ]
@@ -138,6 +139,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'profiles.pagination.ProfilePagination',
     'PAGE_SIZE': 10,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# OpenAPI schema at /api/schema/, Swagger UI at /api/docs/.
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'User Profiles API',
+    'DESCRIPTION': 'CRUD for Django users and their profiles, with search, filters, sorting and JSON import.',
+    'VERSION': '1.0.0',
+    # Separate request/response schemas, so profile_image shows as a file upload in requests.
+    'COMPONENT_SPLIT_REQUEST': True,
+    # Keep /api/schema/ itself out of the docs.
+    'SERVE_INCLUDE_SCHEMA': False,
+    # The API has no authentication (see docs/known-issues.md), so don't show login locks.
+    'AUTHENTICATION_WHITELIST': [],
 }
 
 # The React dev server runs on a different port, so allow it to call the API.
