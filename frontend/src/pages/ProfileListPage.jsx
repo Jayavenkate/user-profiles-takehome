@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router'
 
 import { deleteProfile, listProfiles } from '../api/profiles'
 import ConfirmDialog from '../components/ConfirmDialog'
 import FilterDrawer from '../components/FilterDrawer'
-import { CloseIcon, EditIcon, EyeIcon, FilterIcon, RefreshIcon, TrashIcon } from '../components/Icons'
+import { CloseIcon, EditIcon, EyeIcon, FilterIcon, TrashIcon } from '../components/Icons'
 import ImportButton from '../components/ImportButton'
 import ImportResult from '../components/ImportResult'
 import Pagination from '../components/Pagination'
@@ -27,8 +27,6 @@ function readOrdering(value) {
   const field = (value || '').replace(/^-/, '')
   return SORT_FIELDS.includes(field) ? { field, descending: value.startsWith('-') } : null
 }
-
-const MIN_REFRESH_SPIN_MS = 600
 
 export default function ProfileListPage() {
   // The URL is the single source of truth for page, page size, search, sort and filters,
@@ -55,21 +53,6 @@ export default function ProfileListPage() {
     (signal) => listProfiles({ page, pageSize, search, ordering, filters: toApiParams(filters) }, signal),
     [page, pageSize, search, ordering, filterKey],
   )
-
-  // The API usually answers in a few ms, so keep the refresh icon spinning briefly
-  // after a click; otherwise the button looks like it did nothing.
-  const [refreshStartedAt, setRefreshStartedAt] = useState(null)
-  useEffect(() => {
-    if (refreshStartedAt === null || loading) return
-    const remaining = Math.max(0, MIN_REFRESH_SPIN_MS - (Date.now() - refreshStartedAt))
-    const timer = setTimeout(() => setRefreshStartedAt(null), remaining)
-    return () => clearTimeout(timer)
-  }, [refreshStartedAt, loading])
-
-  function handleRefresh() {
-    setRefreshStartedAt(Date.now())
-    reload()
-  }
 
   // Ticked rows belong to one view of the list: changing page, search or filters starts a
   // new selection. Ids that are no longer on the page (e.g. just deleted) are dropped too.
@@ -219,16 +202,6 @@ export default function ProfileListPage() {
           </div>
           <div className="toolbar-end">
             {loading && data && <span className="muted"><Spinner label="Loading…" /></span>}
-            <button
-              type="button"
-              className={`icon-button icon-button-boxed${refreshStartedAt !== null ? ' is-refreshing' : ''}`}
-              onClick={handleRefresh}
-              aria-label="Refresh list"
-              aria-busy={refreshStartedAt !== null}
-              title="Refresh"
-            >
-              <RefreshIcon size={18} />
-            </button>
             <button
               type="button"
               className={`button${activeFilterCount ? ' button-filter-active' : ''}`}

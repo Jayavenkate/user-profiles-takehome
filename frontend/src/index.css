@@ -509,10 +509,6 @@ a {
   margin: 0;
 }
 
-.is-refreshing svg {
-  animation: spin 0.7s linear infinite;
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -520,8 +516,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spinner,
-  .is-refreshing svg {
+  .spinner {
     animation-duration: 1.5s;
   }
 }
@@ -1043,13 +1038,6 @@ textarea:focus {
   color: #fff;
   font-size: 0.72rem;
   font-weight: 700;
-}
-
-.icon-button-boxed {
-  width: 38px;
-  height: 38px;
-  border-color: var(--border);
-  background: var(--surface-soft);
 }
 
 .filter-chips {

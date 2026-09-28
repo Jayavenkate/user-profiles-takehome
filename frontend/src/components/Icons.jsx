@@ -89,13 +89,6 @@ export const EyeIcon = (props) => (
   </Icon>
 )
 
-export const RefreshIcon = (props) => (
-  <Icon {...props}>
-    <path d="M21 12a9 9 0 1 1-2.64-6.36" />
-    <path d="M21 3v6h-6" />
-  </Icon>
-)
-
 export const FilterIcon = (props) => (
   <Icon {...props}>
     <path d="M3 6h18M7 12h10M10 18h4" />
