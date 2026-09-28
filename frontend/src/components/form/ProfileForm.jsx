@@ -219,7 +219,7 @@ export default function ProfileForm({ profile = null, submitLabel, cancelTo, onS
                 {...props}
                 value={values.department}
                 options={departments.data || []}
-                placeholder="Select department"
+                placeholder="Type or choose a department"
                 onChange={(value) => setField('department', value)}
               />
             )}
@@ -232,7 +232,7 @@ export default function ProfileForm({ profile = null, submitLabel, cancelTo, onS
                 {...props}
                 value={values.country}
                 options={countries.data || []}
-                placeholder="Select country"
+                placeholder="Type or choose a country"
                 onChange={(value) => setField('country', value)}
               />
             )}
