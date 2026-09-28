@@ -11,3 +11,18 @@ export function describeErrors(errors) {
     return [].concat(messages).map((message) => `${label}${message}`)
   })
 }
+
+// "1990-04-05" -> "5 Apr 1990". Parsed as a local date so it never shifts a day by timezone.
+export function formatDate(value) {
+  if (!value) return '—'
+  const [year, month, day] = value.slice(0, 10).split('-').map(Number)
+  return new Date(year, month - 1, day).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })
+}
+
+export function formatDateTime(value) {
+  return value ? new Date(value).toLocaleString() : '—'
+}
+
+export function capitalize(value) {
+  return value ? value[0].toUpperCase() + value.slice(1) : '—'
+}

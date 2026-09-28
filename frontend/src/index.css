@@ -369,3 +369,49 @@ textarea:focus {
 .import-result details {
   margin-top: 0.75rem;
 }
+
+/* ---------- Detail page ---------- */
+
+.breadcrumb {
+  margin: 0 0 1rem;
+}
+
+.detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-title {
+  flex: 1 1 220px;
+}
+
+.detail-title p {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.detail-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+.detail-fields dt {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.detail-fields dd {
+  margin: 0.1rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.detail-bio {
+  white-space: pre-wrap;
+  margin: 0;
+}
