@@ -12,3 +12,5 @@ build/
 .idea/
 .vscode/
 REVIEWER_RUBRIC.md
+backend/media/
+*.sqlite3
