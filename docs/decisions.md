@@ -34,18 +34,19 @@
 
 **Validation on both sides.** Client-side checks give instant feedback and avoid pointless requests. The server is still the authority, since only it can know that a username is taken. Its errors are mapped back onto the same fields.
 
-**Search on submit (Enter / button) rather than as-you-type.** It's simpler and avoids a request per keystroke. Debounced search was listed as a bonus, and I left it for later.
+**Debounced search-as-you-type.** Searching waits for a 350 ms pause, so typing a name sends one request, not one per keystroke. Enter still searches immediately. While typing, the URL is updated with `replace`, so the history isn't filled with half-typed searches.
 
-**Native `window.confirm` for delete.** It's accessible, keyboard-friendly and needs no extra code. A custom modal would look nicer, but it wouldn't be more usable.
+**Sorting through a named allowlist, not DRF's `OrderingFilter`.** The URL stays readable (`?ordering=-name`), `name` can mean first name then last name, and a client can't sort by fields that aren't in the table. Sort lives in the URL with page, search and filters.
+
+**A native `<dialog>` for delete confirmation.** `ConfirmDialog` uses `showModal()`, which gives focus trapping, Esc to close and a backdrop without a modal library. Unlike `window.confirm`, it can name the profile being deleted and stay open with a spinner until the request finishes.
 
 **Always send multipart from the form.** The API accepts both formats, and using `FormData` for every save means one code path whether or not an image was chosen.
 
 ## What I'd improve with more time
 
 - **Frontend tests** (Vitest + React Testing Library): form validation, API error mapping, and the empty and no-results states.
-- **Debounced search-as-you-type**, sortable columns and department/active filters, all kept in the URL like page and search.
 - **Thumbnails.** Resize uploaded images (for example with Pillow on save), so the list doesn't download full-size images for 36px avatars.
-- **A proper confirm dialog** and an "unsaved changes" warning when leaving the form.
+- **An "unsaved changes" warning** when leaving the form.
 - **Database-level email uniqueness** (a unique constraint on `Lower('email')` in a migration) to close the race described in Known issues.
 - **Import preview / update mode.** Show what will happen before committing, with an optional "update existing" mode.
 - **Authentication and permissions** on the API.

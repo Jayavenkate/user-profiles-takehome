@@ -1,6 +1,6 @@
 # Import behaviour
 
-**Import JSON** on the list page uploads a file to `POST /api/profiles/import/`. The summary appears on the same page: counts, plus a table of failed rows with reasons. Skipped usernames are listed in a collapsible section.
+**Import JSON** on the list page uploads a file to `POST /api/profiles/import/`. The summary opens in a dialog over the list: counts, plus a table of failed rows with reasons. Skipped usernames are listed in a collapsible section.
 
 ## How each record is handled
 

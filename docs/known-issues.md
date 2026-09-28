@@ -14,9 +14,9 @@ Nothing in the core requirements is unfinished as far as I know. These are the l
 
 ## Frontend
 
-- **No frontend automated tests.** I checked the UI by driving it in a headless browser (list, search, pagination, import, detail, create, edit, image preview/replace/remove, delete, 404s, and 768px width), but those scripts are not part of the repo.
-- **Search runs on Enter or the Search button**, not as you type.
-- **Delete uses the browser's native confirm dialog.**
+- **No frontend automated tests.** I checked the UI by driving it in a headless browser (list, search as you type, sorting, filters, row selection, bulk delete, pagination, import, detail, create, edit, image preview/replace/remove, delete, 404s, and 768px width), but those scripts are not part of the repo.
+- **Bulk delete is one request per profile.** There is no bulk endpoint, so if some deletes fail the rest still go through; the failures are listed afterwards.
+- **Selection is per page.** Ticked rows are cleared when you change page, search or filters, so bulk actions only reach the rows you can see.
 - **No warning about unsaved changes** when leaving the form.
 - **Pagination has Previous/Next only**, with no numbered page links.
 - **Timestamps (`created_at`, `updated_at`) show in the browser's local time.** Dates of birth and hire dates are plain dates and never shift.
