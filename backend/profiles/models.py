@@ -21,6 +21,16 @@ def validate_image_size(file):
         raise ValidationError(f'Image must be {MAX_IMAGE_SIZE_MB} MB or smaller.')
 
 
+# Shared by the model field and the API serializer.
+PROFILE_IMAGE_VALIDATORS = [
+    FileExtensionValidator(
+        allowed_extensions=ALLOWED_IMAGE_EXTENSIONS,
+        message='Only JPG, JPEG, PNG and WEBP images are allowed.',
+    ),
+    validate_image_size,
+]
+
+
 class UserProfile(models.Model):
     class Gender(models.TextChoices):
         MALE = 'male', 'Male'
@@ -42,10 +52,7 @@ class UserProfile(models.Model):
     profile_image = models.ImageField(
         upload_to=profile_image_upload_to,
         blank=True,
-        validators=[
-            FileExtensionValidator(allowed_extensions=ALLOWED_IMAGE_EXTENSIONS),
-            validate_image_size,
-        ],
+        validators=PROFILE_IMAGE_VALIDATORS,
     )
     hire_date = models.DateField()
     is_active = models.BooleanField(default=True)
