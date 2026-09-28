@@ -1,0 +1,176 @@
+:root {
+  --text: #1f2328;
+  --muted: #656d76;
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --border: #d0d7de;
+  --primary: #0969da;
+  --primary-hover: #0550ae;
+  --danger: #cf222e;
+  --danger-bg: #ffebe9;
+  --success: #1a7f37;
+  --success-bg: #dafbe1;
+  --warning-bg: #fff8c5;
+  --radius: 6px;
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: var(--primary);
+}
+
+/* ---------- Layout ---------- */
+
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--bg);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.button-danger {
+  color: var(--danger);
+}
+
+.button-danger:hover:not(:disabled) {
+  background: var(--danger-bg);
+}
+
+.button-small {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- States ---------- */
+
+.state-box {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.state-box h1,
+.state-box h2 {
+  color: var(--text);
+}
+
+.state-box p {
+  margin: 0.5rem 0 1rem;
+}
+
+.alert {
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+}
+
+.alert-error {
+  background: var(--danger-bg);
+  border-color: #ffcecb;
+  color: var(--danger);
+}
+
+.alert-success {
+  background: var(--success-bg);
+  border-color: #aceebb;
+  color: var(--success);
+}
+
+.alert-warning {
+  background: var(--warning-bg);
+  border-color: #eed888;
+}
