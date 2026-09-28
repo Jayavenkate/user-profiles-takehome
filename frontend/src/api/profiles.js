@@ -1,7 +1,16 @@
 import { request } from './client'
 
-export function listProfiles({ page, pageSize, search } = {}, signal) {
-  return request('/profiles/', { params: { page, page_size: pageSize, search }, signal })
+// `filters` holds the extra list params (department, is_active, created_after, ...).
+export function listProfiles({ page, pageSize, search, ordering, filters } = {}, signal) {
+  return request('/profiles/', { params: { page, page_size: pageSize, search, ordering, ...filters }, signal })
+}
+
+export function listDepartments(signal) {
+  return request('/profiles/departments/', { signal })
+}
+
+export function listCountries(signal) {
+  return request('/profiles/countries/', { signal })
 }
 
 export function getProfile(id, signal) {

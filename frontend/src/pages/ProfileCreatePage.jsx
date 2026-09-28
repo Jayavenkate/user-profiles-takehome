@@ -2,22 +2,32 @@ import { Link, useNavigate } from 'react-router'
 
 import { createProfile } from '../api/profiles'
 import ProfileForm from '../components/form/ProfileForm'
+import { ArrowLeftIcon } from '../components/Icons'
+import useToast from '../hooks/useToast'
+import { fullName } from '../utils/profile'
 
 export default function ProfileCreatePage() {
   const navigate = useNavigate()
+  const showToast = useToast()
 
   async function handleSubmit(formData) {
     const profile = await createProfile(formData)
-    navigate(`/profiles/${profile.id}`, { state: { message: 'Profile created.' } })
+    showToast(`${fullName(profile)} was added.`)
+    navigate('/')
   }
 
   return (
     <>
-      <p className="breadcrumb">
-        <Link to="/">← All profiles</Link>
-      </p>
+      <Link to="/" className="back-link">
+        <ArrowLeftIcon size={18} />
+        Back to profiles
+      </Link>
+
       <div className="page-header">
-        <h1>New profile</h1>
+        <div>
+          <h1>New profile</h1>
+          <p className="page-subtitle">Add a team member to the directory.</p>
+        </div>
       </div>
       <ProfileForm submitLabel="Create profile" cancelTo="/" onSubmit={handleSubmit} />
     </>
