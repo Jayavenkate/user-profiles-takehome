@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+db.sqlite3
+node_modules/
+dist/
+build/
+.DS_Store
+.idea/
+.vscode/
+REVIEWER_RUBRIC.md

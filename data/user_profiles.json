@@ -1,0 +1,1801 @@
+[
+  {
+    "username": "ahmad.smith",
+    "email": "ahmad.smith@example.com",
+    "first_name": "Ahmad",
+    "last_name": "Smith",
+    "profile": {
+      "phone": "+971 23756669",
+      "gender": "male",
+      "date_of_birth": "1976-04-05",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2023-04-05",
+      "is_active": false
+    }
+  },
+  {
+    "username": "noura.alsabah",
+    "email": "noura.alsabah@example.com",
+    "first_name": "Noura",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+971 90801586",
+      "gender": "female",
+      "date_of_birth": "1980-06-08",
+      "job_title": "Backend Developer",
+      "department": "Engineering",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2020-08-31",
+      "is_active": true
+    }
+  },
+  {
+    "username": "reem.tanaka",
+    "email": "reem.tanaka@example.com",
+    "first_name": "Reem",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+966 31429110",
+      "gender": "female",
+      "date_of_birth": "1970-04-17",
+      "job_title": "Financial Analyst",
+      "department": "Finance",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2023-07-06",
+      "is_active": true
+    }
+  },
+  {
+    "username": "john.alenezi",
+    "email": "john.alenezi@example.com",
+    "first_name": "John",
+    "last_name": "Al-Enezi",
+    "profile": {
+      "phone": "+973 56164955",
+      "gender": "male",
+      "date_of_birth": "1974-05-04",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2019-01-10",
+      "is_active": true
+    }
+  },
+  {
+    "username": "chloe.alenezi",
+    "email": "chloe.alenezi@example.com",
+    "first_name": "Chloe",
+    "last_name": "Al-Enezi",
+    "profile": {
+      "phone": "+965 94374605",
+      "gender": "female",
+      "date_of_birth": "1994-10-06",
+      "job_title": "Business Developer",
+      "department": "Sales",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2018-04-15",
+      "is_active": true
+    }
+  },
+  {
+    "username": "omar.khan",
+    "email": "omar.khan@example.com",
+    "first_name": "Omar",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+966 41244663",
+      "gender": "male",
+      "date_of_birth": "1973-07-31",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2024-08-04",
+      "is_active": true
+    }
+  },
+  {
+    "username": "layla.sharma",
+    "email": "layla.sharma@example.com",
+    "first_name": "Layla",
+    "last_name": "Sharma",
+    "profile": {
+      "phone": "+971 96977837",
+      "gender": "female",
+      "date_of_birth": "2000-01-24",
+      "job_title": "Marketing Specialist",
+      "department": "Marketing",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "",
+      "hire_date": "2017-12-29",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hamad.tanaka",
+    "email": "hamad.tanaka@example.com",
+    "first_name": "Hamad",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+966 84752529",
+      "gender": "male",
+      "date_of_birth": "1998-09-16",
+      "job_title": "Account Executive",
+      "department": "Sales",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2022-09-19",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hassan.almutairi",
+    "email": "hassan.almutairi@example.com",
+    "first_name": "Hassan",
+    "last_name": "Al-Mutairi",
+    "profile": {
+      "phone": "+974 18883684",
+      "gender": "male",
+      "date_of_birth": "1987-12-30",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "",
+      "hire_date": "2018-01-01",
+      "is_active": true
+    }
+  },
+  {
+    "username": "huda.kim",
+    "email": "huda.kim@example.com",
+    "first_name": "Huda",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+44 45551614",
+      "gender": "female",
+      "date_of_birth": "1990-08-01",
+      "job_title": "Account Executive",
+      "department": "Sales",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2016-08-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "grace.rossi",
+    "email": "grace.rossi@example.com",
+    "first_name": "Grace",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+973 28566572",
+      "gender": "female",
+      "date_of_birth": "1986-03-28",
+      "job_title": "Financial Analyst",
+      "department": "Finance",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2017-06-17",
+      "is_active": true
+    }
+  },
+  {
+    "username": "faisal.alkandari",
+    "email": "faisal.alkandari@example.com",
+    "first_name": "Faisal",
+    "last_name": "Al-Kandari",
+    "profile": {
+      "phone": "+44 18526544",
+      "gender": "male",
+      "date_of_birth": "1988-12-08",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2021-09-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yuki.smith",
+    "email": "yuki.smith@example.com",
+    "first_name": "Yuki",
+    "last_name": "Smith",
+    "profile": {
+      "phone": "+965 25374874",
+      "gender": "female",
+      "date_of_birth": "2000-07-07",
+      "job_title": "Financial Analyst",
+      "department": "Finance",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2023-01-31",
+      "is_active": false
+    }
+  },
+  {
+    "username": "layla.tanaka",
+    "email": "layla.tanaka@example.com",
+    "first_name": "Layla",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+1 77187530",
+      "gender": "female",
+      "date_of_birth": "2002-04-14",
+      "job_title": "Frontend Developer",
+      "department": "Engineering",
+      "city": "Toronto",
+      "country": "Canada",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2017-12-14",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yuki.hussain",
+    "email": "yuki.hussain@example.com",
+    "first_name": "Yuki",
+    "last_name": "Hussain",
+    "profile": {
+      "phone": "+965 31682744",
+      "gender": "female",
+      "date_of_birth": "1986-10-10",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Salmiya",
+      "country": "Kuwait",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2023-07-21",
+      "is_active": true
+    }
+  },
+  {
+    "username": "elena.alsabah",
+    "email": "elena.alsabah@example.com",
+    "first_name": "Elena",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+974 17774584",
+      "gender": "female",
+      "date_of_birth": "1983-10-18",
+      "job_title": "Frontend Developer",
+      "department": "Engineering",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "",
+      "hire_date": "2017-09-07",
+      "is_active": true
+    }
+  },
+  {
+    "username": "carlos.alazmi",
+    "email": "carlos.alazmi@example.com",
+    "first_name": "Carlos",
+    "last_name": "Al-Azmi",
+    "profile": {
+      "phone": "+91 27232410",
+      "gender": "male",
+      "date_of_birth": "2004-05-09",
+      "job_title": "Support Agent",
+      "department": "Operations",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2016-05-30",
+      "is_active": true
+    }
+  },
+  {
+    "username": "tariq.brown",
+    "email": "tariq.brown@example.com",
+    "first_name": "Tariq",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+63 38427073",
+      "gender": "male",
+      "date_of_birth": "1988-12-24",
+      "job_title": "Support Agent",
+      "department": "Operations",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2025-10-25",
+      "is_active": true
+    }
+  },
+  {
+    "username": "sophia.tanaka",
+    "email": "sophia.tanaka@example.com",
+    "first_name": "Sophia",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+20 40158366",
+      "gender": "female",
+      "date_of_birth": "1975-06-06",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2017-10-12",
+      "is_active": false
+    }
+  },
+  {
+    "username": "kenji.khan",
+    "email": "kenji.khan@example.com",
+    "first_name": "Kenji",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+965 17901903",
+      "gender": "male",
+      "date_of_birth": "2001-10-02",
+      "job_title": "Frontend Developer",
+      "department": "Engineering",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2022-01-28",
+      "is_active": true
+    }
+  },
+  {
+    "username": "sara.brown",
+    "email": "sara.brown@example.com",
+    "first_name": "Sara",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+966 38754377",
+      "gender": "female",
+      "date_of_birth": "2000-01-04",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2020-06-11",
+      "is_active": true
+    }
+  },
+  {
+    "username": "reem.kim",
+    "email": "reem.kim@example.com",
+    "first_name": "Reem",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+973 23009833",
+      "gender": "female",
+      "date_of_birth": "1978-07-17",
+      "job_title": "Support Agent",
+      "department": "Operations",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2016-01-22",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maria.almutairi",
+    "email": "maria.almutairi@example.com",
+    "first_name": "Maria",
+    "last_name": "Al-Mutairi",
+    "profile": {
+      "phone": "+44 18135295",
+      "gender": "female",
+      "date_of_birth": "1998-12-27",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2016-02-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hassan.haddad",
+    "email": "not-an-email",
+    "first_name": "Hassan",
+    "last_name": "Haddad",
+    "profile": {
+      "phone": "+91 66623995",
+      "gender": "male",
+      "date_of_birth": "1990-02-15",
+      "job_title": "UI Designer",
+      "department": "Design",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2016-07-28",
+      "is_active": true
+    }
+  },
+  {
+    "username": "arjun.nguyen",
+    "email": "arjun.nguyen@example.com",
+    "first_name": "Arjun",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+965 11980765",
+      "gender": "male",
+      "date_of_birth": "1999-04-03",
+      "job_title": "Backend Developer",
+      "department": "Engineering",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2021-01-23",
+      "is_active": true
+    }
+  },
+  {
+    "username": "elena.haddad",
+    "email": "elena.haddad@example.com",
+    "first_name": "Elena",
+    "last_name": "Haddad",
+    "profile": {
+      "phone": "+973 60864911",
+      "gender": "female",
+      "date_of_birth": "1972-08-18",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2016-11-05",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hessa.rossi",
+    "email": "hessa.rossi@example.com",
+    "first_name": "Hessa",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+1 75319931",
+      "gender": "female",
+      "date_of_birth": "1994-12-06",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Toronto",
+      "country": "Canada",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2022-06-04",
+      "is_active": true
+    }
+  },
+  {
+    "username": "kenji.nguyen",
+    "email": "kenji.nguyen@example.com",
+    "first_name": "Kenji",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+1 16729990",
+      "gender": "male",
+      "date_of_birth": "1984-01-26",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Toronto",
+      "country": "Canada",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2015-08-23",
+      "is_active": true
+    }
+  },
+  {
+    "username": "omar.brown",
+    "email": "omar.brown@example.com",
+    "first_name": "Omar",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+965 19121552",
+      "gender": "male",
+      "date_of_birth": "1973-01-27",
+      "job_title": "Frontend Developer",
+      "department": "Engineering",
+      "city": "Salmiya",
+      "country": "Kuwait",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2021-09-03",
+      "is_active": false
+    }
+  },
+  {
+    "username": "kenji.hussain",
+    "email": "kenji.hussain@example.com",
+    "first_name": "Kenji",
+    "last_name": "Hussain",
+    "profile": {
+      "phone": "+63 98231132",
+      "gender": "male",
+      "date_of_birth": "1973-09-05",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "",
+      "hire_date": "2019-09-14",
+      "is_active": true
+    }
+  },
+  {
+    "username": "huda.patel",
+    "email": "huda.patel@example.com",
+    "first_name": "Huda",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+966 96637649",
+      "gender": "female",
+      "date_of_birth": "1987-10-03",
+      "job_title": "UX Researcher",
+      "department": "Design",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2016-06-20",
+      "is_active": true
+    }
+  },
+  {
+    "username": "ahmad.tanaka",
+    "email": "ahmad.tanaka@example.com",
+    "first_name": "Ahmad",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+63 82160068",
+      "gender": "male",
+      "date_of_birth": "1974-06-27",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2015-10-28",
+      "is_active": true
+    }
+  },
+  {
+    "username": "sara.khan",
+    "email": "sara.khan@example.com",
+    "first_name": "Sara",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+966 82909480",
+      "gender": "female",
+      "date_of_birth": "1977-01-28",
+      "job_title": "SEO Analyst",
+      "department": "Marketing",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2019-11-30",
+      "is_active": true
+    }
+  },
+  {
+    "username": "mateo.johnson",
+    "email": "mateo.johnson@example.com",
+    "first_name": "Mateo",
+    "last_name": "Johnson",
+    "profile": {
+      "phone": "+965 25492573",
+      "gender": "male",
+      "date_of_birth": "1976-01-10",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2017-12-19",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hannah.haddad",
+    "email": "hannah.haddad@example.com",
+    "first_name": "Hannah",
+    "last_name": "Haddad",
+    "profile": {
+      "phone": "+974 95125977",
+      "gender": "female",
+      "date_of_birth": "1979-02-18",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2022-09-16",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yousef.rossi",
+    "email": "yousef.rossi@example.com",
+    "first_name": "Yousef",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+966 54769200",
+      "gender": "male",
+      "date_of_birth": "1971-12-24",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2015-01-15",
+      "is_active": true
+    }
+  },
+  {
+    "username": "chloe.rossi",
+    "email": "chloe.rossi@example.com",
+    "first_name": "Chloe",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+965 30005727",
+      "gender": "female",
+      "date_of_birth": "1975-01-07",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2015-11-05",
+      "is_active": true
+    }
+  },
+  {
+    "username": "raj.alrashidi",
+    "email": "raj.alrashidi@example.com",
+    "first_name": "Raj",
+    "last_name": "Al-Rashidi",
+    "profile": {
+      "phone": "+966 15354599",
+      "gender": "male",
+      "date_of_birth": "1986-05-11",
+      "job_title": "QA Engineer",
+      "department": "Engineering",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2025-01-30",
+      "is_active": true
+    }
+  },
+  {
+    "username": "michael.nguyen",
+    "email": "michael.nguyen@example.com",
+    "first_name": "Michael",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+973 30743797",
+      "gender": "male",
+      "date_of_birth": "1997-11-03",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2023-05-28",
+      "is_active": true
+    }
+  },
+  {
+    "username": "raj.alsabah",
+    "email": "raj.alsabah@example.com",
+    "first_name": "Raj",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+1 65259205",
+      "gender": "male",
+      "date_of_birth": "1984-11-25",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Toronto",
+      "country": "Canada",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2023-10-10",
+      "is_active": true
+    }
+  },
+  {
+    "username": "daniel.almutairi",
+    "email": "daniel.almutairi@example.com",
+    "first_name": "Daniel",
+    "last_name": "Al-Mutairi",
+    "profile": {
+      "phone": "+20 71780854",
+      "gender": "male",
+      "date_of_birth": "1979-12-24",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2017-03-28",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hassan.alsabah",
+    "email": "hassan.alsabah@example.com",
+    "first_name": "Hassan",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+971 47393469",
+      "gender": "male",
+      "date_of_birth": "1987-11-16",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2018-09-06",
+      "is_active": true
+    }
+  },
+  {
+    "username": "chloe.patel",
+    "email": "chloe.patel@example.com",
+    "first_name": "Chloe",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+965 87925434",
+      "gender": "female",
+      "date_of_birth": "1981-09-19",
+      "job_title": "QA Engineer",
+      "department": "Engineering",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Passionate about clean code and continuous learning.",
+      "hire_date": "2017-01-01",
+      "is_active": false
+    }
+  },
+  {
+    "username": "sophia.patel",
+    "email": "sophia.patel@example.com",
+    "first_name": "Sophia",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+63 61700055",
+      "gender": "female",
+      "date_of_birth": "1992-12-10",
+      "job_title": "Business Developer",
+      "department": "Sales",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2016-04-18",
+      "is_active": true
+    }
+  },
+  {
+    "username": "fatima.brown",
+    "email": "fatima.brown@example.com",
+    "first_name": "Fatima",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+91 36445607",
+      "gender": "female",
+      "date_of_birth": "2000-10-23",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2023-01-25",
+      "is_active": false
+    }
+  },
+  {
+    "username": "hannah.patel",
+    "email": "hannah.patel@example.com",
+    "first_name": "Hannah",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+965 50308572",
+      "gender": "female",
+      "date_of_birth": "2002-04-15",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2025-02-03",
+      "is_active": true
+    }
+  },
+  {
+    "username": "chloe.alrashidi",
+    "email": "chloe.alrashidi@example.com",
+    "first_name": "Chloe",
+    "last_name": "Al-Rashidi",
+    "profile": {
+      "phone": "+973 60888017",
+      "gender": "female",
+      "date_of_birth": "1999-10-30",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2025-07-18",
+      "is_active": true
+    }
+  },
+  {
+    "username": "priya.nguyen",
+    "email": "priya.nguyen@example.com",
+    "first_name": "Priya",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+965 38210242",
+      "gender": "female",
+      "date_of_birth": "1983-08-19",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "",
+      "hire_date": "2018-03-21",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maria.tanaka",
+    "email": "maria.tanaka@example.com",
+    "first_name": "Maria",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+44 73509974",
+      "gender": "female",
+      "date_of_birth": "1979-08-03",
+      "job_title": "Business Developer",
+      "department": "Sales",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2020-09-24",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yuki.hussain2",
+    "email": "yuki.hussain2@example.com",
+    "first_name": "Yuki",
+    "last_name": "Hussain",
+    "profile": {
+      "phone": "+965 51663795",
+      "gender": "female",
+      "date_of_birth": "2003-09-11",
+      "job_title": "Marketing Specialist",
+      "department": "Marketing",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2017-08-20",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hassan.kim",
+    "email": "hassan.kim@example.com",
+    "first_name": "Hassan",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+965 94525678",
+      "gender": "male",
+      "date_of_birth": "1990-06-06",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2019-08-25",
+      "is_active": true
+    }
+  },
+  {
+    "username": "grace.rossi",
+    "email": "grace.rossi@example.com",
+    "first_name": "Faisal",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+965 39372360",
+      "gender": "male",
+      "date_of_birth": "2004-12-01",
+      "job_title": "Operations Coordinator",
+      "department": "Operations",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2019-10-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "khaled.tanaka",
+    "email": "khaled.tanaka@example.com",
+    "first_name": "Khaled",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+20 85017682",
+      "gender": "male",
+      "date_of_birth": "1999-12-12",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2020-12-15",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hannah.brown",
+    "email": "hannah.brown@example.com",
+    "first_name": "Hannah",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+91 31361812",
+      "gender": "female",
+      "date_of_birth": "1990-01-01",
+      "job_title": "Business Developer",
+      "department": "Sales",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2025-01-22",
+      "is_active": true
+    }
+  },
+  {
+    "username": "tariq.brown2",
+    "email": "tariq.brown2@example.com",
+    "first_name": "Tariq",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+44 69038700",
+      "gender": "male",
+      "date_of_birth": "1980-09-24",
+      "job_title": "Account Executive",
+      "department": "Sales",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2018-01-29",
+      "is_active": true
+    }
+  },
+  {
+    "username": "emily.nguyen",
+    "email": "emily.nguyen@example.com",
+    "first_name": "Emily",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+965 61410126",
+      "gender": "female",
+      "date_of_birth": "1976-10-07",
+      "job_title": "Frontend Developer",
+      "department": "Engineering",
+      "city": "Salmiya",
+      "country": "Kuwait",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2017-08-05",
+      "is_active": false
+    }
+  },
+  {
+    "username": "emily.nguyen2",
+    "email": "emily.nguyen2@example.com",
+    "first_name": "Emily",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+973 66390708",
+      "gender": "female",
+      "date_of_birth": "1972-10-17",
+      "job_title": "Sales Manager",
+      "department": "Sales",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "",
+      "hire_date": "2017-04-27",
+      "is_active": true
+    }
+  },
+  {
+    "username": "kenji.garcia",
+    "email": "kenji.garcia@example.com",
+    "first_name": "Kenji",
+    "last_name": "Garcia",
+    "profile": {
+      "phone": "+965 62343121",
+      "gender": "male",
+      "date_of_birth": "1985-10-12",
+      "job_title": "Sales Manager",
+      "department": "Sales",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2018-05-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "carlos.khan",
+    "email": "carlos.khan@example.com",
+    "first_name": "Carlos",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+973 62191530",
+      "gender": "male",
+      "date_of_birth": "1991-10-14",
+      "job_title": "Content Writer",
+      "department": "Marketing",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2015-04-29",
+      "is_active": true
+    }
+  },
+  {
+    "username": "aisha.hussain",
+    "email": "aisha.hussain@example.com",
+    "first_name": "Aisha",
+    "last_name": "Hussain",
+    "profile": {
+      "phone": "+965 85751409",
+      "gender": "female",
+      "date_of_birth": "1987-09-04",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2021-08-21",
+      "is_active": true
+    }
+  },
+  {
+    "username": "arjun.alkandari",
+    "email": "arjun.alkandari@example.com",
+    "first_name": "Arjun",
+    "last_name": "Al-Kandari",
+    "profile": {
+      "phone": "+966 38408562",
+      "gender": "male",
+      "date_of_birth": "1987-01-03",
+      "job_title": "DevOps Engineer",
+      "department": "Engineering",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2018-09-02",
+      "is_active": true
+    }
+  },
+  {
+    "username": "dana.rossi",
+    "email": "dana.rossi@example.com",
+    "first_name": "Dana",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+965 82399599",
+      "gender": "female",
+      "date_of_birth": "1991-02-05",
+      "job_title": "Marketing Specialist",
+      "department": "Marketing",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2015-03-21",
+      "is_active": true
+    }
+  },
+  {
+    "username": "omar.alsabah",
+    "email": "omar.alsabah@example.com",
+    "first_name": "Omar",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+971 30452412",
+      "gender": "male",
+      "date_of_birth": "1970-11-30",
+      "job_title": "UI Designer",
+      "department": "Design",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2021-12-19",
+      "is_active": true
+    }
+  },
+  {
+    "username": "kenji.haddad",
+    "email": "kenji.haddad@example.com",
+    "first_name": "Kenji",
+    "last_name": "Haddad",
+    "profile": {
+      "phone": "+1 59512272",
+      "gender": "male",
+      "date_of_birth": "1981-06-30",
+      "job_title": "Account Executive",
+      "department": "Sales",
+      "city": "Toronto",
+      "country": "Canada",
+      "bio": "",
+      "hire_date": "2023-08-08",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hamad.johnson",
+    "email": "hamad.johnson@example.com",
+    "first_name": "Hamad",
+    "last_name": "Johnson",
+    "profile": {
+      "phone": "+63 51870192",
+      "gender": "male",
+      "date_of_birth": "1971-02-25",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2025-06-01",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yousef.fernandes",
+    "email": "yousef.fernandes@example.com",
+    "first_name": "Yousef",
+    "last_name": "Fernandes",
+    "profile": {
+      "phone": "+44 50477742",
+      "gender": "male",
+      "date_of_birth": "1980-11-22",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "",
+      "hire_date": "2016-02-22",
+      "is_active": true
+    }
+  },
+  {
+    "username": "chloe.rossi2",
+    "email": "chloe.rossi2@example.com",
+    "first_name": "Chloe",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+974 96911784",
+      "gender": "female",
+      "date_of_birth": "1973-02-03",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "Passionate about clean code and continuous learning.",
+      "hire_date": "2020-09-03",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maryam.rossi",
+    "email": "maryam.rossi@example.com",
+    "first_name": "Maryam",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+44 30534124",
+      "gender": "female",
+      "date_of_birth": "1990-08-16",
+      "job_title": "Content Writer",
+      "department": "Marketing",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2022-12-07",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hannah.nguyen",
+    "email": "hannah.nguyen@example.com",
+    "first_name": "Hannah",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+20 89520597",
+      "gender": "female",
+      "date_of_birth": "1990-11-08",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2019-11-20",
+      "is_active": true
+    }
+  },
+  {
+    "username": "tariq.tanaka",
+    "email": "tariq.tanaka@example.com",
+    "first_name": "Tariq",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+20 99682738",
+      "gender": "male",
+      "date_of_birth": "1995-07-25",
+      "job_title": "UX Researcher",
+      "department": "Design",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Mentor, reader, and amateur photographer.",
+      "hire_date": "2021-11-04",
+      "is_active": false
+    }
+  },
+  {
+    "username": "layla.kim",
+    "email": "layla.kim@example.com",
+    "first_name": "Layla",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+974 47535126",
+      "gender": "female",
+      "date_of_birth": "1981-08-03",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2018-10-26",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yousef.khan",
+    "email": "yousef.khan@example.com",
+    "first_name": "Yousef",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+973 42255732",
+      "gender": "male",
+      "date_of_birth": "1991-12-01",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2021-03-24",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yousef.johnson",
+    "email": "yousef.johnson@example.com",
+    "first_name": "Yousef",
+    "last_name": "Johnson",
+    "profile": {
+      "phone": "+973 51098277",
+      "gender": "male",
+      "date_of_birth": "2001-01-12",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "",
+      "hire_date": "2017-09-23",
+      "is_active": true
+    }
+  },
+  {
+    "username": "ananya.nguyen",
+    "email": "ananya.nguyen@example.com",
+    "first_name": "Ananya",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+974 46361787",
+      "gender": "female",
+      "date_of_birth": "2001-07-12",
+      "job_title": "Content Writer",
+      "department": "Marketing",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2020-02-02",
+      "is_active": true
+    }
+  },
+  {
+    "username": "john.alenezi2",
+    "email": "john.alenezi2@example.com",
+    "first_name": "John",
+    "last_name": "Al-Enezi",
+    "profile": {
+      "phone": "+91 34850391",
+      "gender": "male",
+      "date_of_birth": "2004-03-10",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2022-09-27",
+      "is_active": true
+    }
+  },
+  {
+    "username": "grace.brown",
+    "email": "grace.brown@example.com",
+    "first_name": "Grace",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+966 36054020",
+      "gender": "female",
+      "date_of_birth": "1974-07-06",
+      "job_title": "Financial Analyst",
+      "department": "Finance",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Loves design systems and accessibility.",
+      "hire_date": "2024-05-03",
+      "is_active": true
+    }
+  },
+  {
+    "username": "fatima.nguyen",
+    "email": "fatima.nguyen@example.com",
+    "first_name": "Fatima",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+966 17318358",
+      "gender": "female",
+      "date_of_birth": "1972-01-16",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2025-12-04",
+      "is_active": true
+    }
+  },
+  {
+    "username": "carlos.alenezi",
+    "email": "carlos.alenezi@example.com",
+    "first_name": "Carlos",
+    "last_name": "Al-Enezi",
+    "profile": {
+      "phone": "+965 73001391",
+      "gender": "male",
+      "date_of_birth": "1995-13-40",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2018-03-10",
+      "is_active": true
+    }
+  },
+  {
+    "username": "tariq.kim",
+    "email": "tariq.kim@example.com",
+    "first_name": "Tariq",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+965 19943140",
+      "gender": "male",
+      "date_of_birth": "1987-12-23",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Hawalli",
+      "country": "Kuwait",
+      "bio": "Passionate about clean code and continuous learning.",
+      "hire_date": "2020-07-07",
+      "is_active": true
+    }
+  },
+  {
+    "username": "sara.khan2",
+    "email": "sara.khan2@example.com",
+    "first_name": "Sara",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+91 91378577",
+      "gender": "female",
+      "date_of_birth": "2004-04-16",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "",
+      "hire_date": "2019-09-01",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maria.tanaka2",
+    "email": "maria.tanaka2@example.com",
+    "first_name": "Maria",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+63 86320155",
+      "gender": "female",
+      "date_of_birth": "1989-03-27",
+      "job_title": "SEO Analyst",
+      "department": "Marketing",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Passionate about clean code and continuous learning.",
+      "hire_date": "2018-06-04",
+      "is_active": true
+    }
+  },
+  {
+    "username": "ali.haddad",
+    "email": "ali.haddad@example.com",
+    "first_name": "Ali",
+    "last_name": "Haddad",
+    "profile": {
+      "phone": "+44 42194159",
+      "gender": "male",
+      "date_of_birth": "1973-08-23",
+      "job_title": "Marketing Specialist",
+      "department": "Marketing",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2016-10-05",
+      "is_active": false
+    }
+  },
+  {
+    "username": "raj.tanaka",
+    "email": "raj.tanaka@example.com",
+    "first_name": "Raj",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+63 14380847",
+      "gender": "male",
+      "date_of_birth": "1991-01-30",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Manila",
+      "country": "Philippines",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2018-04-07",
+      "is_active": true
+    }
+  },
+  {
+    "username": "sara.khan3",
+    "email": "sara.khan3@example.com",
+    "first_name": "Sara",
+    "last_name": "Khan",
+    "profile": {
+      "phone": "+44 36550845",
+      "gender": "female",
+      "date_of_birth": "1996-06-16",
+      "job_title": "Content Writer",
+      "department": "Marketing",
+      "city": "London",
+      "country": "United Kingdom",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2022-06-01",
+      "is_active": true
+    }
+  },
+  {
+    "username": "tariq.alrashidi",
+    "email": "tariq.alrashidi@example.com",
+    "first_name": "Tariq",
+    "last_name": "Al-Rashidi",
+    "profile": {
+      "phone": "+965 51286958",
+      "gender": "male",
+      "date_of_birth": "1977-06-11",
+      "job_title": "Engineering Manager",
+      "department": "Engineering",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "",
+      "hire_date": "2023-11-21",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maryam.tanaka",
+    "email": "maryam.tanaka@example.com",
+    "first_name": "Maryam",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+966 46540265",
+      "gender": "female",
+      "date_of_birth": "2001-05-22",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2019-07-07",
+      "is_active": false
+    }
+  },
+  {
+    "username": "raj.patel",
+    "email": "raj.patel@example.com",
+    "first_name": "Raj",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+966 40725714",
+      "gender": "male",
+      "date_of_birth": "1971-02-28",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2016-01-10",
+      "is_active": true
+    }
+  },
+  {
+    "username": "carlos.brown",
+    "email": "carlos.brown@example.com",
+    "first_name": "Carlos",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+20 88561612",
+      "gender": "male",
+      "date_of_birth": "1982-06-24",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2017-01-13",
+      "is_active": true
+    }
+  },
+  {
+    "email": "sophia.rossi@example.com",
+    "first_name": "Sophia",
+    "last_name": "Rossi",
+    "profile": {
+      "phone": "+974 31585546",
+      "gender": "female",
+      "date_of_birth": "2000-01-23",
+      "job_title": "Content Writer",
+      "department": "Marketing",
+      "city": "Doha",
+      "country": "Qatar",
+      "bio": "Believes good documentation saves lives.",
+      "hire_date": "2016-03-04",
+      "is_active": true
+    }
+  },
+  {
+    "username": "priya.nguyen2",
+    "email": "priya.nguyen2@example.com",
+    "first_name": "Priya",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+20 43876400",
+      "gender": "female",
+      "date_of_birth": "1973-12-13",
+      "job_title": "QA Engineer",
+      "department": "Engineering",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2018-07-12",
+      "is_active": true
+    }
+  },
+  {
+    "username": "yuki.alsabah",
+    "email": "yuki.alsabah@example.com",
+    "first_name": "Yuki",
+    "last_name": "Al-Sabah",
+    "profile": {
+      "phone": "+91 17275149",
+      "gender": "female",
+      "date_of_birth": "1990-09-22",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Team player who enjoys cross-functional work.",
+      "hire_date": "2019-08-20",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maria.almutairi2",
+    "email": "maria.almutairi2@example.com",
+    "first_name": "Maria",
+    "last_name": "Al-Mutairi",
+    "profile": {
+      "phone": "+966 48658617",
+      "gender": "female",
+      "date_of_birth": "1994-08-21",
+      "job_title": "UX Researcher",
+      "department": "Design",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2016-06-20",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hamad.johnson2",
+    "email": "hamad.johnson2@example.com",
+    "first_name": "Hamad",
+    "last_name": "Johnson",
+    "profile": {
+      "phone": "+965 22510327",
+      "gender": "male",
+      "date_of_birth": "1994-10-10",
+      "job_title": "Accountant",
+      "department": "Finance",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2019-07-30",
+      "is_active": true
+    }
+  },
+  {
+    "username": "faisal.kim",
+    "email": "faisal.kim@example.com",
+    "first_name": "Faisal",
+    "last_name": "Kim",
+    "profile": {
+      "phone": "+966 46698468",
+      "gender": "male",
+      "date_of_birth": "1992-10-29",
+      "job_title": "Recruiter",
+      "department": "HR",
+      "city": "Riyadh",
+      "country": "Saudi Arabia",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2022-11-29",
+      "is_active": true
+    }
+  },
+  {
+    "username": "arjun.nguyen2",
+    "email": "arjun.nguyen2@example.com",
+    "first_name": "Arjun",
+    "last_name": "Nguyen",
+    "profile": {
+      "phone": "+973 90447099",
+      "gender": "male",
+      "date_of_birth": "1978-07-20",
+      "job_title": "Product Designer",
+      "department": "Design",
+      "city": "Manama",
+      "country": "Bahrain",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2025-05-03",
+      "is_active": true
+    }
+  },
+  {
+    "username": "ananya.patel",
+    "email": "ananya.patel@example.com",
+    "first_name": "Ananya",
+    "last_name": "Patel",
+    "profile": {
+      "phone": "+91 10344303",
+      "gender": "female",
+      "date_of_birth": "1981-12-26",
+      "job_title": "Project Manager",
+      "department": "Operations",
+      "city": "Mumbai",
+      "country": "India",
+      "bio": "Data-driven and detail oriented.",
+      "hire_date": "2024-03-14",
+      "is_active": true
+    }
+  },
+  {
+    "username": "aisha.tanaka",
+    "email": "aisha.tanaka@example.com",
+    "first_name": "Aisha",
+    "last_name": "Tanaka",
+    "profile": {
+      "phone": "+20 84077101",
+      "gender": "female",
+      "date_of_birth": "1985-06-25",
+      "job_title": "Financial Analyst",
+      "department": "Finance",
+      "city": "Cairo",
+      "country": "Egypt",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2018-09-23",
+      "is_active": true
+    }
+  },
+  {
+    "username": "hassan.fernandes",
+    "email": "hassan.fernandes@example.com",
+    "first_name": "Hassan",
+    "last_name": "Fernandes",
+    "profile": {
+      "phone": "+971 15858241",
+      "gender": "male",
+      "date_of_birth": "2004-10-15",
+      "job_title": "Sales Manager",
+      "department": "Sales",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "bio": "Always curious about new tools and frameworks.",
+      "hire_date": "2019-08-10",
+      "is_active": true
+    }
+  },
+  {
+    "username": "priya.alrashidi",
+    "email": "priya.alrashidi@example.com",
+    "first_name": "Priya",
+    "last_name": "Al-Rashidi",
+    "profile": {
+      "phone": "+965 89212676",
+      "gender": "female",
+      "date_of_birth": "1975-08-31",
+      "job_title": "Sales Manager",
+      "department": "Sales",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Coffee lover and weekend hiker.",
+      "hire_date": "2020-08-19",
+      "is_active": true
+    }
+  },
+  {
+    "username": "maryam.brown",
+    "email": "maryam.brown@example.com",
+    "first_name": "Maryam",
+    "last_name": "Brown",
+    "profile": {
+      "phone": "+965 65026398",
+      "gender": "female",
+      "date_of_birth": "2002-05-29",
+      "job_title": "Business Developer",
+      "department": "Sales",
+      "city": "Kuwait City",
+      "country": "Kuwait",
+      "bio": "Enjoys solving customer problems end to end.",
+      "hire_date": "2016-08-13",
+      "is_active": false
+    }
+  }
+]
