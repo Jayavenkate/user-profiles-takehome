@@ -29,3 +29,5 @@ npm run dev
 ```
 
 Open http://localhost:5173 and click **Import JSON** to load `data/user_profiles.json`.
+
+Or, with Docker: `docker compose up --build` from the repository root (same URLs). API docs: http://localhost:8000/api/docs/.

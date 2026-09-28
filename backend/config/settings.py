@@ -84,7 +84,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # Docker points this at a volume so the data survives container restarts.
+        'NAME': os.environ.get('DJANGO_DB_PATH', BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -156,7 +157,8 @@ SPECTACULAR_SETTINGS = {
 }
 
 # The React dev server runs on a different port, so allow it to call the API.
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-]
+# Comma-separated override, e.g. when the frontend runs on another port.
+CORS_ALLOWED_ORIGINS = os.environ.get(
+    'DJANGO_CORS_ALLOWED_ORIGINS',
+    'http://localhost:5173,http://127.0.0.1:5173',
+).split(',')

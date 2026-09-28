@@ -10,6 +10,7 @@ Nothing in the core requirements is unfinished as far as I know. These are the l
 - **Import never updates existing users.** This is by design (see [Import behaviour](import.md)), but it means re-importing a corrected file won't fix records that already exist.
 - **Images are served by Django only while `DEBUG` is on.** Production would need the web server or object storage (S3 or similar) to serve `MEDIA_ROOT`.
 - **No image resizing.** The list's thumbnails load the original uploaded file.
+- **The Docker backend uses Django's development server** (`runserver`) with `DEBUG` on. That's what serves uploaded images there. It's meant for running the app locally, not for production.
 - **No database-level check** that `gender` is `male`/`female`. It's enforced by model choices and the serializer, not by a `CHECK` constraint.
 
 ## Frontend

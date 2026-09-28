@@ -10,6 +10,8 @@
 
 No database server is needed. The backend uses SQLite.
 
+Prefer containers? See [Run with Docker](#run-with-docker-alternative).
+
 ## Backend
 
 ```bash
@@ -35,6 +37,8 @@ python manage.py createsuperuser
 |---|---|---|
 | `DJANGO_SECRET_KEY` | a development-only key | Set a real value outside local development. |
 | `DJANGO_DEBUG` | `1` | `0` turns debug off. Uploaded images are only served by Django while debug is on. |
+| `DJANGO_DB_PATH` | `backend/db.sqlite3` | Where the SQLite file lives. Docker sets it to a volume. |
+| `DJANGO_CORS_ALLOWED_ORIGINS` | `http://localhost:5173,http://127.0.0.1:5173` | Comma-separated origins allowed to call the API. |
 
 ## Frontend
 
@@ -49,6 +53,21 @@ npm run dev                        # http://localhost:5173
 The frontend calls `http://localhost:8000/api` by default. To point it somewhere else, copy `frontend/.env.example` to `frontend/.env.local` and change `VITE_API_URL`.
 
 The backend allows CORS requests from `http://localhost:5173` and `http://127.0.0.1:5173` only. If Vite picks a different port because 5173 is busy, stop the other process or add the port to `CORS_ALLOWED_ORIGINS` in `backend/config/settings.py`.
+
+## Run with Docker (alternative)
+
+If you have Docker with Compose v2, one command builds and starts both apps. No Python or Node is needed on your machine.
+
+```bash
+docker compose up --build
+```
+
+- Frontend: http://localhost:5173
+- API: http://localhost:8000/api (Swagger UI at http://localhost:8000/api/docs/)
+
+The ports are the same as the manual setup, so stop `runserver` and `npm run dev` first if they are running. The database and uploaded images are kept in Docker volumes, so they survive `docker compose down` and restarts. To start from an empty database, run `docker compose down -v`.
+
+The backend container runs migrations on start and then Django's development server. The frontend is built with `npm run build` and served by nginx, so it's the production bundle rather than the Vite dev server. The API URL is baked in at build time (`VITE_API_URL` build arg in `docker-compose.yml`).
 
 ## Load the sample data
 

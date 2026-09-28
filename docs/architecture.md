@@ -6,6 +6,8 @@ Browser (React, :5173) ──fetch──► Django REST Framework (:8000) ──
                                          └──► backend/media/profile_images/  (uploaded files)
 ```
 
+With Docker (`docker-compose.yml`), the same two apps run as containers: `backend` (Django dev server, SQLite and media in named volumes) and `frontend` (the built bundle served by nginx, which sends every route to `index.html`).
+
 ## Backend (`backend/`)
 
 ```

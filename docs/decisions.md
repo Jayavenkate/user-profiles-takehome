@@ -44,6 +44,8 @@
 
 **Always send multipart from the form.** The API accepts both formats, and using `FormData` for every save means one code path whether or not an image was chosen.
 
+**Docker as an alternative, not a requirement.** The manual setup stays the main path, and `docker compose up --build` gives the same URLs without installing Python or Node. The frontend image serves the production build with nginx instead of running Vite, which is smaller and closer to a real deployment. The backend still uses `runserver` and SQLite, which keeps the image simple; a real deployment would use gunicorn and Postgres.
+
 ## What I'd improve with more time
 
 - **Thumbnails.** Resize uploaded images (for example with Pillow on save), so the list doesn't download full-size images for 36px avatars.
@@ -51,4 +53,3 @@
 - **Database-level email uniqueness** (a unique constraint on `Lower('email')` in a migration) to close the race described in Known issues.
 - **Import preview / update mode.** Show what will happen before committing, with an optional "update existing" mode.
 - **Authentication and permissions** on the API.
-- **A `docker-compose.yml`** for one-command setup.

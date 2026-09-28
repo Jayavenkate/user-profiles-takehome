@@ -1,0 +1,30 @@
+# Runs the whole app with one command:
+#   docker compose up --build
+# Frontend: http://localhost:5173   API: http://localhost:8000/api   API docs: http://localhost:8000/api/docs/
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_DB_PATH: /app/data/db.sqlite3
+    volumes:
+      # Database and uploaded images live in named volumes, so they survive restarts.
+      - backend-data:/app/data
+      - backend-media:/app/media
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000/api
+    ports:
+      # Same port as `npm run dev`, which the backend's CORS settings allow.
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:
+  backend-media:
