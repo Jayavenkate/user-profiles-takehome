@@ -1,20 +1,23 @@
-import { useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router'
+import { Link, useLocation, useNavigate, useParams } from 'react-router'
 
 import { getProfile } from '../api/profiles'
 import DeleteProfileButton from '../components/DeleteProfileButton'
+import { ArrowLeftIcon } from '../components/Icons'
 import ProfileImage from '../components/ProfileImage'
 import StatusBadge from '../components/StatusBadge'
+import useToast from '../hooks/useToast'
 import useFetch from '../hooks/useFetch'
-import useFlashMessage from '../hooks/useFlashMessage'
+import { LoadingState } from '../components/Spinner'
 import { capitalize, formatDate, formatDateTime, fullName } from '../utils/profile'
 import NotFoundPage from './NotFoundPage'
 
 export default function ProfileDetailPage() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const [message, setMessage] = useFlashMessage()
-  const [deleteError, setDeleteError] = useState(null)
+  const location = useLocation()
+  // The list view we came from (page, search, filters), or the plain list for direct visits.
+  const from = typeof location.state?.from === 'string' && location.state.from.startsWith('/') ? location.state.from : '/'
+  const showToast = useToast()
 
   const { data: profile, error, loading, reload } = useFetch((signal) => getProfile(id, signal), [id])
 
@@ -31,7 +34,7 @@ export default function ProfileDetailPage() {
     )
   }
   if (loading || !profile) {
-    return <div className="state-box">Loading profile…</div>
+    return <LoadingState label="Loading profile…" />
   }
 
   const name = fullName(profile)
@@ -52,17 +55,10 @@ export default function ProfileDetailPage() {
 
   return (
     <>
-      <p className="breadcrumb">
-        <Link to="/">← All profiles</Link>
-      </p>
-
-      {message && (
-        <div className="alert alert-success" role="status">
-          {message}
-          <button type="button" className="link-button" onClick={() => setMessage(null)}>Dismiss</button>
-        </div>
-      )}
-      {deleteError && <div className="alert alert-error" role="alert">{deleteError}</div>}
+      <Link to={from} className="back-link">
+        <ArrowLeftIcon size={18} />
+        Back to profiles
+      </Link>
 
       <div className="card detail">
         <div className="detail-header">
@@ -73,11 +69,14 @@ export default function ProfileDetailPage() {
             <StatusBadge active={profile.is_active} />
           </div>
           <div className="header-actions">
-            <Link to={`/profiles/${profile.id}/edit`} className="button button-primary">Edit</Link>
+            <Link to={`/profiles/${profile.id}/edit`} state={{ from }} className="button button-primary">Edit</Link>
             <DeleteProfileButton
               profile={profile}
-              onDeleted={() => navigate('/', { state: { message: `${name} was deleted.` } })}
-              onError={setDeleteError}
+              onDeleted={() => {
+                showToast(`${name} was deleted.`)
+                navigate(from)
+              }}
+              onError={(message) => showToast(message, { tone: 'error' })}
             />
           </div>
         </div>
