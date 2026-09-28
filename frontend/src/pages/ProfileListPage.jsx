@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useLocation, useSearchParams } from 'react-router'
+import { Link, useSearchParams } from 'react-router'
 
 import { listProfiles } from '../api/profiles'
 import ImportButton from '../components/ImportButton'
@@ -9,6 +9,7 @@ import ProfileTable from '../components/ProfileTable'
 import SearchBar from '../components/SearchBar'
 import { PAGE_SIZES } from '../constants'
 import useFetch from '../hooks/useFetch'
+import useFlashMessage from '../hooks/useFlashMessage'
 import { fullName } from '../utils/profile'
 
 function readPositiveInt(value, fallback) {
@@ -25,8 +26,7 @@ export default function ProfileListPage() {
   const pageSize = PAGE_SIZES.includes(requestedSize) ? requestedSize : PAGE_SIZES[0]
   const search = searchParams.get('search') || ''
 
-  const location = useLocation()
-  const [message, setMessage] = useState(location.state?.message || null)
+  const [message, setMessage] = useFlashMessage()
   const [actionError, setActionError] = useState(null)
   const [importResult, setImportResult] = useState(null)
 

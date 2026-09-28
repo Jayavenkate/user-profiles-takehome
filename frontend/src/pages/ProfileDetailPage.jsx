@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router'
 
 import { getProfile } from '../api/profiles'
 import DeleteProfileButton from '../components/DeleteProfileButton'
 import ProfileImage from '../components/ProfileImage'
 import StatusBadge from '../components/StatusBadge'
 import useFetch from '../hooks/useFetch'
+import useFlashMessage from '../hooks/useFlashMessage'
 import { capitalize, formatDate, formatDateTime, fullName } from '../utils/profile'
 import NotFoundPage from './NotFoundPage'
 
 export default function ProfileDetailPage() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const location = useLocation()
-  const [message, setMessage] = useState(location.state?.message || null)
+  const [message, setMessage] = useFlashMessage()
   const [deleteError, setDeleteError] = useState(null)
 
   const { data: profile, error, loading, reload } = useFetch((signal) => getProfile(id, signal), [id])
