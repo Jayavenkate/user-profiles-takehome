@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react'
 
 import { importProfiles } from '../api/profiles'
+import { UploadIcon } from './Icons'
+import Spinner from './Spinner'
 
 /** Opens a file picker and uploads the chosen JSON file. The page shows the result. */
 export default function ImportButton({ onImported, onError }) {
@@ -27,6 +29,7 @@ export default function ImportButton({ onImported, onError }) {
     <>
       <input ref={inputRef} type="file" accept=".json,application/json" hidden onChange={handleFileChange} />
       <button type="button" className="button" disabled={importing} onClick={() => inputRef.current.click()}>
+        {importing ? <Spinner /> : <UploadIcon />}
         {importing ? 'Importing…' : 'Import JSON'}
       </button>
     </>
